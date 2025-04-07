@@ -81,4 +81,4 @@ jobs:
           -H "X-GitHub-Api-Version: 2022-11-28" \
           -H "Content-Type: application/octet-stream" \
           "${{ needs.get-release-url.outputs.upload-url }}?name=app.zip" \
-          --data-binary "@app.zip"
+          --data-binary "@$(pwd)/app.zip"
