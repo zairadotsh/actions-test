@@ -69,6 +69,7 @@ jobs:
         env:
           RELEASE_URL: ${{ needs.get-release-url.outputs.release-url }}
         run: |
+          echo "Adding app tar to $RELEAsE_URL"
           curl -L \
           -X POST \
           -H "Accept: application/vnd.github+json" \
