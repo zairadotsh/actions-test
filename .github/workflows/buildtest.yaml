@@ -74,6 +74,7 @@ jobs:
       - name: publish
         run: |
           echo "Adding app tar to ${{ needs.get-release-url.outputs.release-url }}"
+          filepath="$(pwd)/app.zip"
           curl -vL \
           -X POST \
           -H "Accept: application/vnd.github+json" \
