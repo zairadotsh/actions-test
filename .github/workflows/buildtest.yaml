@@ -80,5 +80,5 @@ jobs:
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
           -H "X-GitHub-Api-Version: 2022-11-28" \
           -H "Content-Type: application/octet-stream" \
-          "${{ needs.get-release-url.outputs.upload-url }}/assets?name=app.tar.gz" \
+          "${{ needs.get-release-url.outputs.upload-url }}?name=app.tar.gz" \
           --data-binary "@app.tar.gz"
