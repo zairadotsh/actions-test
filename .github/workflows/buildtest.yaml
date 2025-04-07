@@ -3,8 +3,8 @@ name: build-test
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - "*.*.*"
 
 jobs:
   get-release-url:
