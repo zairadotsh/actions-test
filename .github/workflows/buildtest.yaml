@@ -18,6 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: get-url
+        id: get-url
         run: |
           TAG=$(git describe --tags --abbrev=0)
           echo "Latest Tag: $TAG"
